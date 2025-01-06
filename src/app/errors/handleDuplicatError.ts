@@ -1,30 +1,25 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { TErrorSources, TGenericErrorResponse } from "../interface/error";
+import { TErrorSources, TGenericErrorResponse } from '../interface/error';
 
+const handleDuplicatError = (err: any): TGenericErrorResponse => {
+  const match = err.message.match(/"([^"]*)"/);
+  const extractedMessage = match && match[1];
 
-const handleDuplicatError = (err:any):TGenericErrorResponse=>{
-
-    const match = err.message.match(/"([^"]*)"/);
-    const extractedMessage = match && match[1];
-
-const errorSources:TErrorSources = [
+  const errorSources: TErrorSources = [
     {
-        path: '',
-        message:`${extractedMessage} is already exists`,
-    }
-]
+      path: '',
+      message: `${extractedMessage} is already exists`,
+    },
+  ];
 
+  const statusCode = 400;
 
-
-const  statusCode = 400;
-
- return{
+  return {
     statusCode,
     message: ' Validation Error',
     errorSources,
+  };
 };
 
-};
-
-export default  handleDuplicatError;
+export default handleDuplicatError;

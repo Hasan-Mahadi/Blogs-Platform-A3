@@ -1,5 +1,5 @@
- export interface TLoginUser {
-    id:string,
-    email: string,
-    password: string
-};
+export interface TLoginUser {
+  id: string;
+  email: string;
+  password: string;
+}
