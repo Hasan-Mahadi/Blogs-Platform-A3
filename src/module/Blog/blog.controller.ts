@@ -132,77 +132,17 @@ const DeleteBlog = async (req: Request, res: Response) => {
   }
 };
 
-//Method: GET  ALL
+//get all blogs
 
-// const getAllBlogs = async (req: Request, res: Response) => {
-// try {
-// const blogs: Tblog[] = await blogService.getAllBlogs();
-
-// res.status(200).json({
-// success: true,
-// message: 'Blogs fetched successfully',
-// data: blogs.map((blog) => ({
-// _id: blog._id,
-// title: blog.title,
-// content: blog.content,
-// author: req.user ,
-// })),
-// });
-// } catch (error) {
-// res.status(500).json({
-// success: false,
-// message: 'An error occurred while fetching blogs',
-// error: error instanceof Error ? error.message : 'Unknown error',
-// });
+// interface BlogQueryParams {
+// search?: string;
+// sortBy?: string;
+// sortOrder?: 'asc' | 'desc';
+// filter?: string;
 // }
-// };
-//
-
-// import { Request, Response } from "express";
-
-// async function getBlogs(req: Request, res: Response) {
-// try {
-// const blogs = await getAllBlogs();
-// res.status(200).json({
-// success: true,
-// message: "Blogs fetched successfully",
-// statusCode: 200,
-// data: blogs
-// });
-// } catch (error) {
-// res.status(500).json({
-// success: false,
-// message: error.message,
-// statusCode: 500
-// });
-// }
-// }
-
-// import { Request, Response } from 'express';
-//
-// async function getBlogs(req: Request, res: Response) {
-// try {
-// const blogs = await blogService.getAllBlogs();
-// res.status(200).json({
-// success: true,
-// message: 'Blogs fetched successfully',
-// statusCode: 200,
-// data: blogs,
-// author: req.user ,
-// });
-// } catch (error) {
-// res.status(500).json({
-// success: false,
-// message: error.message,
-// statusCode: 500,
-// });
-// }
-// }
-//
-
-async function getBlogs(req: Request, res: Response) {
+const getBlogs = async (req: Request<>, res: Response) => {
   try {
-    const blogs = await blogService.getAllBlogs();
+    const blogs = await blogService.getAllBlogs(req.query);
 
     if (!blogs.length) {
       return res.status(404).json({
@@ -225,7 +165,7 @@ async function getBlogs(req: Request, res: Response) {
       message: error.message,
     });
   }
-}
+};
 
 export const blogController = {
   createBlog,

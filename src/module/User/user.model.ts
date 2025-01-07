@@ -40,9 +40,9 @@ const userSchema = new Schema<TUser>(
       required: true,
     },
   },
-  // {
-  //   timestamps:true
-  // }
+  {
+    timestamps: true,
+  },
 );
 
 // Hook -> pre
