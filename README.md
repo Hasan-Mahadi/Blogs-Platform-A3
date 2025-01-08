@@ -60,7 +60,7 @@ I Develop an Express application with TypeScript, integrating MongoDB with Mongo
 
 - Add, retrieve, update, and delete books.
 
-| Order Management |
+| Blogs Management |
 - Place blogs and update inventory automatically.
 
 | Error Handling |
