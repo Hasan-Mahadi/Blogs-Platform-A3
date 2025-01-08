@@ -1,4 +1,4 @@
-import { jwt } from 'jsonwebtoken';
+import  jwt  from 'jsonwebtoken';
 import express, { Application } from 'express';
 import { Request, Response } from 'express';
 import cors from 'cors';

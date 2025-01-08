@@ -14,4 +14,4 @@ async function server() {
   }
 }
 
-server();
+ module.exports = server();

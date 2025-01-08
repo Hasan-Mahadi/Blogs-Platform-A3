@@ -2,7 +2,6 @@
 
 **#Authentication & Authorization On TypeScript | Node.js | Express.js | MongoDB with Mongoose | JWT**
 
-
 Objective:
 
 I Develop an Express application with TypeScript, integrating MongoDB with Mongoose to manage a Book Store. Ensure data integrity using Mongoose schema validation and Others.
@@ -48,7 +47,7 @@ I Develop an Express application with TypeScript, integrating MongoDB with Mongo
 
 - Database Configuration: | src/app/config/index.ts |.
 - Models: | src/models/User.ts | src/models/blog.ts |.
-- Controllers:user  Controller: | src/controllers/user Controller.ts |.
+- Controllers:user Controller: | src/controllers/user Controller.ts |.
 - Controllers:blog Controller: | src/controllers/blog Controller.ts |.
 - Controllers:auth Controller: | src/controllers/auth Controller.ts |.
 - Routes: | src/routes/userRoutes.ts | src/routes/blogRoutes.ts| src/routes/authRoutes.ts|.
@@ -61,9 +60,11 @@ I Develop an Express application with TypeScript, integrating MongoDB with Mongo
 - Add, retrieve, update, and delete blogs.
 
 | Blogs Management |
+
 - Place blogs and update inventory automatically.
 
 | Error Handling |
+
 - Provides meaningful error messages with stack traces.
 
 ZOD_ERROR: Validation errors from Zod.
@@ -84,13 +85,12 @@ INTERNAL_SERVER_ERROR: Unexpected server issues.
 -Database: MongoDB (with Mongoose).
 -Validation: Mongoose schema validation.
 -Error Handling: Custom middleware.
--Authentication: JWT, bycrypt, 
+-Authentication: JWT, bycrypt,
 
 6. {timestamps: true}
 
-7.  Endpoints: | POST, GET, GET, PUT, DELETE |.
+7. Endpoints: | POST, GET, GET, PUT, DELETE |.
 
-8.  Access the API at http://localhost:5000.
+8. Access the API at http://localhost:5000.
 
-9.  https://book-shop-assignment-2.vercel.app/
-
+9. https://book-shop-assignment-2.vercel.app/
