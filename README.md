@@ -59,9 +59,11 @@ I Develop an Express application with TypeScript, integrating MongoDB with Mongo
 **CRUD Operations for Blogs**
 
 - Add, retrieve, update, and delete books.
-  **Order Management**
+
+-|Order Management|
 - Place blogs and update inventory automatically.
-  **Error Handling**
+
+-|Error Handling|
 - Provides meaningful error messages with stack traces.
 
 ZOD_ERROR: Validation errors from Zod.
