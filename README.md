@@ -80,10 +80,10 @@ INTERNAL_SERVER_ERROR: Unexpected server issues.
 
 5. Technology Stack:
 
--Backend: Node.js, Express.js, TypeScript
--Database: MongoDB (with Mongoose)
--Validation: Mongoose schema validation
--Error Handling: Custom middleware
+-Backend: Node.js, Express.js, TypeScript.
+-Database: MongoDB (with Mongoose).
+-Validation: Mongoose schema validation.
+-Error Handling: Custom middleware.
 -Authentication: JWT, bycrypt, 
 
 6. {timestamps: true}
