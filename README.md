@@ -58,7 +58,7 @@ I Develop an Express application with TypeScript, integrating MongoDB with Mongo
 
 **CRUD Operations for Blogs**
 
-- Add, retrieve, update, and delete books.
+- Add, retrieve, update, and delete blogs.
 
 | Blogs Management |
 - Place blogs and update inventory automatically.
@@ -80,11 +80,11 @@ INTERNAL_SERVER_ERROR: Unexpected server issues.
 
 5. Technology Stack:
 
-**Backend:** Node.js, Express.js, TypeScript
-**Database:** MongoDB (with Mongoose)
-**Validation:** Mongoose schema validation
-**Error Handling:** Custom middleware
-**Authentication** JWT, bycrypt, 
+-Backend: Node.js, Express.js, TypeScript
+-Database: MongoDB (with Mongoose)
+-Validation: Mongoose schema validation
+-Error Handling: Custom middleware
+-Authentication: JWT, bycrypt, 
 
 6. {timestamps: true}
 
