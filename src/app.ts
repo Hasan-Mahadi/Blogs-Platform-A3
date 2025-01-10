@@ -1,5 +1,8 @@
-import  jwt  from 'jsonwebtoken';
-import express, { Application } from 'express';
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import express, { Application, NextFunction } from 'express';
 import { Request, Response } from 'express';
 import cors from 'cors';
 import authRoute from './module/auth/auth.route';
@@ -27,15 +30,26 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Assalamoyalaikom');
 });
 
-app.use((req, res, next) => {
-  // Example: Attach user from a decoded JWT
-  const token = req.headers.authorization?.split(' ')[1];
-  if (token) {
-    const user = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = user;
-  }
-  next();
-});
+// app.use((req, res, next) => {
+// Example: Attach user from a decoded JWT
+// const token = req.headers.authorization?.split(' ')[1];
+// if (token) {
+// const user = jwt.verify(token, process.env.JWT_SECRET);
+// req.user = user;
+// }
+// next();
+// });
+//
+
+const globalErrorHandler = (
+  err: any,
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  console.error('Error:', err.stack);
+  res.status(500).json({ message: 'Internal Server Error' });
+};
 
 app.use(globalErrorHandler);
 

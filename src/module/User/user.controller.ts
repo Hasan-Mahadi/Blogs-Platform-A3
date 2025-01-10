@@ -43,31 +43,7 @@ const getUser = async (req: Request, res: Response) => {
   }
 };
 
-// Method:PATCH
-
-const blockUser = async (req: Request, res: Response) => {
-  try {
-    const { userId } = req.params;
-    await userService.blockUserById(userId);
-    return sendResponse(res, {
-      message: 'User blocked successfully',
-      statusCode: StatusCodes.OK,
-      data: '',
-      success: false,
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: 'Validation error',
-      statusCode: 400,
-      error: error.message,
-      stack: error.stack,
-    });
-  }
-};
-
 export const UserController = {
   creatUser,
   getUser,
-  blockUser,
 };

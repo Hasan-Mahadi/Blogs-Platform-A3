@@ -18,10 +18,4 @@ authRoute.post(
   AuthController.login,
 );
 
-authRoute.post(
-  '/admin/login',
-  validateRequest(AuthValidation.loginValidationSchema),
-  AuthController.adminlogin,
-);
-
 export default authRoute;
