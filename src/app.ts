@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import express, { Application, NextFunction } from 'express';
 import { Request, Response } from 'express';
@@ -41,16 +40,16 @@ app.get('/', (req: Request, res: Response) => {
 // });
 //
 
-const globalErrorHandler = (
-  err: any,
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
-  console.error('Error:', err.stack);
-  res.status(500).json({ message: 'Internal Server Error' });
-};
-
+// const globalErrorHandler = (
+// err: any,
+// req: Request,
+// res: Response,
+// next: NextFunction,
+// ) => {
+// console.error('Error:', err.stack);
+// res.status(500).json({ message: 'Internal Server Error' });
+// };
+//
 app.use(globalErrorHandler);
 
 app.use('*', (req: Request, res: Response) => {
