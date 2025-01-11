@@ -25,4 +25,4 @@ async function server() {
   }
 }
 
-module.exports = server();
+server();
