@@ -94,5 +94,6 @@ INTERNAL_SERVER_ERROR: Unexpected server issues.
 
 8. Access the API at http://localhost:5000.
 
-9. https://book-shop-assignment-2.vercel.app/.
+9. https://blog-project-a-3.vercel.app/
+
 10. Token for api blogs = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3RQYXlsb2FkIjp7ImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIn0sImlhdCI6MTczNjYxMzE1NCwiZXhwIjoxNzM5MjA1MTU0fQ.VpHlX3mD5eNppsOJk9lU3jg1cSYRAKOwML8hvmFSJPc
