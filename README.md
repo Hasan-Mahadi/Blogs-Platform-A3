@@ -91,7 +91,6 @@ INTERNAL_SERVER_ERROR: Unexpected server issues.
 
 7. Endpoints: | POST, GET, GET, PUT, DELETE |.
 
-
 8. Access the API at http://localhost:5000.
 
 9. https://blog-project-a-3.vercel.app/

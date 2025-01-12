@@ -29,17 +29,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Assalamoyalaikom');
 });
 
-// app.use((req, res, next) => {
-// Example: Attach user from a decoded JWT
-// const token = req.headers.authorization?.split(' ')[1];
-// if (token) {
-// const user = jwt.verify(token, process.env.JWT_SECRET);
-// req.user = user;
-// }
-// next();
-// });
-//
-
 // const globalErrorHandler = (
 // err: any,
 // req: Request,

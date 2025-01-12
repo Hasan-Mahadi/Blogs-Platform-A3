@@ -75,109 +75,6 @@ const deleteBlog = async (
 
 // for GET ALL
 
-// const getAllBlogs = async () => {
-//
-// const Blogs = await blog.find().populate('author', 'name email');
-// return Blogs;
-// };
-
-//
-//
-
-// const  getAllBlogs = async( query: Record<string, any>={}) => {
-//
-// console.log(query);
-//
-// try {
-//  const search = query?.search || '';
-//
-//
-// const blogs = await blog.find({$or:[
-// {title: {regex:search, $options: "i"}},
-// {content: {regex:search, $options: "i"}}
-// { title: { $regex: new RegExp(search, 'i') } },
-// { content: { $regex: new RegExp(search, 'i') } },
-//
-
-//  const searchableFields = ["title", "content"]
-//
-//
-//
-// // const blogs = await blog.find({$or: searchableFields.map((field)=> ({[field]: { $regex: new RegExp(search, 'i')}}) )})
-// .populate('author', 'email role');
-// return blogs.map((blog) => ({
-// _id: blog._id,
-// title: blog.title,
-// content: blog.content,
-// author: {
-// email: blog.author,
-// role: blog.author,
-// },
-// }));
-// } catch (error) {
-// throw new Error('Error fetching blogs: ' + error.message);
-// }
-// }
-//
-// export const blogService = {
-// creatblog,
-// updateBlog,
-// deleteBlog,
-// getAllBlogs,
-// };
-//
-
-// const getAllBlogs = async (query = {}) => {
-// console.log(query);
-// try {
-// const {
-// search = '',
-// sortBy = 'createdAt',
-// sortOrder = 'asc',
-// filter,
-// } = query;
-//
-// Search functionality
-// const searchableFields = ['title', 'content'];
-// const searchCondition = searchableFields.map((field) => ({
-// [field]: { $regex: new RegExp(search, 'i') },
-// }));
-//
-// Filter functionality
-// const filterCondition = filter ? { author: filter } : {};
-//
-// Combine search and filter conditions
-// const conditions = {
-// $and: [{ $or: searchCondition }, filterCondition],
-// };
-//
-// Sorting functionality
-// const sortCondition = {
-// [sortBy]: sortOrder === 'desc' ? -1 : 1,
-// };
-//
-// Fetch blogs with conditions, sorting, and population
-// const blogs = await blog
-// .find(conditions)
-// .sort(sortCondition)
-// .populate('author', 'email role');
-//
-// Map the results to the desired format
-// return blogs.map((blog) => ({
-// _id: blog._id,
-// title: blog.title,
-// content: blog.content,
-// author: {
-// email: blog.author,
-// role: blog.author,
-// },
-// }));
-// } catch (error) {
-// throw new Error('Error fetching blogs: ' + error.message);
-// }
-// };
-//
-
 import { FilterQuery } from 'mongoose';
 
 interface QueryParams {
@@ -212,10 +109,6 @@ const getAllBlogs = async (query: QueryParams = {}) => {
       $and: [{ $or: searchCondition }, filterCondition],
     };
 
-    // Define sorting condition
-    // const sortCondition = {
-    // [sortBy]: sortOrder === 'desc' ? -1 : 1,
-    // };
     const sortCondition: { [key: string]: SortOrder } = {
       [sortBy]: sortOrder === 'desc' ? -1 : 1,
     };

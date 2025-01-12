@@ -38,34 +38,6 @@ const createBlog = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-// const createBlog = async  (req: Request, res: Response) => {
-// // const payload = { ...req.body, author: req.user?.id }; // Include author explicitly
-//
-// try {
-// if (!req.user) {
-// return res.status(401).json({
-// message: 'User not authenticated',
-// });
-// }
-//
-// const result = await blogService.creatblog(payload);
-// res.status(201).json({
-// success: true,
-// message: 'Blog created successfully',
-// statusCode: StatusCodes.CREATED,
-// data: {
-// _id: result._id,
-// title: result.title,
-// content: result.content,
-// author: req.user,
-// },
-// });
-// } catch (error) {
-// console.error(error);
-// res.status(500).json({ message: 'Internal server error' });
-// }
-// };
-
 //Method: PATCH
 
 const updateBlog = async (req: Request, res: Response) => {
@@ -129,14 +101,6 @@ const DeleteBlog = async (req: Request, res: Response): Promise<void> => {
 };
 
 //get all blogs
-
-// interface BlogQueryParams {
-// search?: string;
-// sortBy?: string;
-// sortOrder?: 'asc' | 'desc';
-// filter?: string;
-// }
-//Request<>
 const getBlogs = async (req: Request, res: Response): Promise<void> => {
   try {
     const blogs = await blogService.getAllBlogs(req.query);
